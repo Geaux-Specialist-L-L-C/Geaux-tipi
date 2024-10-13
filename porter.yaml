@@ -1,56 +1,25 @@
-name: Geaux-tipi
-version: 0.1.0
-description: Runtipi is a homeserver for everyone! One command setup, one click installs for your favorites self-hosted apps.
-
-invocationImage: ghcr.io/your-org/your-bundle:v0.1.0
-
-mixins:
-  - exec
-  - docker
-
-install:
-  - description: "Install Tipi"
-    exec:
-      command: "docker-compose"
-      arguments:
-        - "up"
-        - "-d"
-
-upgrade:
-  - description: "Upgrade Tipi"
-    exec:
-      command: "docker-compose"
-      arguments:
-        - "pull"
-        - "&&"
-        - "docker-compose"
-        - "up"
-        - "-d"
-
-uninstall:
-  - description: "Uninstall Tipi"
-    exec:
-      command: "docker-compose"
-      arguments:
-        - "down"
-
-credentials:
-  - name: docker_username
-    description: "Docker Hub Username"
-    env: "DOCKER_USERNAME"
-  - name: docker_password
-    description: "Docker Hub Password"
-    env: "DOCKER_PASSWORD"
-
-parameters:
-  - name: admin_email
-    description: "Admin email for Tipi setup"
-    type: string
-    default: "admin@example.com"
-
-outputs:
-  - name: tipi_url
-    description: "URL to access the Tipi server"
-    type: string
-    applyTo: ["install", "upgrade"]
-    path: "/path/to/url/output"
+version: v2
+name: geaux-tipi
+services:
+  name: tipi
+  run: docker-compose up -d
+  type: web
+  instances: 1
+  cpuCores: 0.26
+  ramMegabytes: 1300
+  terminationGracePeriodSeconds: 30
+  port: 8080
+  sleep: false
+  build:
+    context: ./
+    method: docker
+    dockerfile: ./Dockerfile
+  env:
+    key: DOCKER_USERNAME
+    value: wickedsploit
+    key: DOCKER_PASSWORD
+    value: Noagenda32@@!?!?
+    key: ADMIN_EMAIL
+    value: support@geauxspecialist.com
+autoRollback:
+  enabled: false
