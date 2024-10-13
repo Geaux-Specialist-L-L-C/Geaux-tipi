@@ -16,7 +16,7 @@ RUN apk add --no-cache python3 make g++ curl openssl git
 RUN npm install pnpm@9.4.0 pm2 -g
 
 # Set architecture and Docker Compose version
-ARG TARGETARCH
+ARG TARGETARCH="amd64"  # Default to amd64 if TARGETARCH is not provided
 ARG DOCKER_COMPOSE_VERSION="v2.29.7"
 ENV TARGETARCH=${TARGETARCH}
 
