@@ -1,25 +1,22 @@
 version: v2
-name: geaux-tipi
+name: run-tipi
 services:
-  name: tipi
-  run: docker-compose up -d
+- name: tipi-web
+  run: ""
   type: web
   instances: 1
-  cpuCores: 0.26
-  ramMegabytes: 1300
+  cpuCores: 0.16
+  ramMegabytes: 300
   terminationGracePeriodSeconds: 30
-  port: 8080
+  port: 3000
+  domains:
+  - name: runtipi.geauxedu.com
   sleep: false
-  build:
-    context: ./
-    method: docker
-    dockerfile: ./Dockerfile
-  env:
-    key: DOCKER_USERNAME
-    value: wickedsploit
-    key: DOCKER_PASSWORD
-    value: Noagenda32@@!?!?
-    key: ADMIN_EMAIL
-    value: support@geauxspecialist.com
+build:
+  context: ./
+  method: docker
+  dockerfile: ./Dockerfile
+efsStorage:
+  enabled: true
 autoRollback:
   enabled: false
