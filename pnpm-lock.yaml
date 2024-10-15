@@ -290,7 +290,7 @@ importers:
         version: 5.6.3
       vite-tsconfig-paths:
         specifier: ^5.0.1
-        version: 5.0.1(typescript@5.6.3)(vite@5.4.8(@types/node@22.7.5)(sass@1.79.4)(terser@5.34.1))
+        version: 5.0.1(typescript@5.6.3)(vite@5.4.8(@types/node@22.7.5)(sass@1.79.5)(terser@5.34.1))
       vitest:
         specifier: ^2.1.2
         version: 2.1.2(@types/node@22.7.5)(@vitest/ui@2.1.2)(jsdom@25.0.1)(msw@2.4.10(typescript@5.6.3))(sass@1.79.5)(terser@5.34.1)
@@ -372,7 +372,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: ^1.13.2
-        version: 1.13.2(hono@4.6.4)
+        version: 1.13.2(hono@4.6.5)
       '@runtipi/cache':
         specifier: workspace:^
         version: link:../cache
@@ -401,8 +401,8 @@ importers:
         specifier: ^0.34.1
         version: 0.34.1(@opentelemetry/api@1.9.0)(@types/pg@8.11.10)(@types/react@18.3.11)(pg@8.13.0)(react@18.3.1)
       hono:
-        specifier: ^4.6.4
-        version: 4.6.4
+        specifier: ^4.6.5
+        version: 4.6.5
       inversify:
         specifier: ^6.0.2
         version: 6.0.2
@@ -456,10 +456,8 @@ importers:
         specifier: ^5.6.3
         version: 5.6.3
       vite-tsconfig-paths:
-
         specifier: ^5.0.1
-        version: 5.0.1(typescript@5.6.3)(vite@5.4.8(@types/node@22.7.5)(sass@1.79.4)(terser@5.34.1))
-
+        version: 5.0.1(typescript@5.6.3)(vite@5.4.8(@types/node@22.7.5)(sass@1.79.5)(terser@5.34.1))
       vitest:
         specifier: ^2.1.2
         version: 2.1.2(@types/node@22.7.5)(@vitest/ui@2.1.2)(jsdom@25.0.1)(msw@2.4.10(typescript@5.6.3))(sass@1.79.5)(terser@5.34.1)
@@ -3452,8 +3450,8 @@ packages:
   hoist-non-react-statics@3.3.2:
     resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
 
-  hono@4.6.4:
-    resolution: {integrity: sha512-T5WqBkTOcIQblqBKB5mpzaH/A+dSpvVe938xZJCHOmOuYfF7DSwE/9/10+BMvwSPq9N/f6LiQ38HxrZSQOsXKw==}
+  hono@4.6.5:
+    resolution: {integrity: sha512-qsmN3V5fgtwdKARGLgwwHvcdLKursMd+YOt69eGpl1dUCJb8mCd7hZfyZnBYjxCegBG7qkJRQRUy2oO25yHcyQ==}
     engines: {node: '>=16.9.0'}
 
   html-encoding-sniffer@4.0.0:
@@ -5839,9 +5837,9 @@ snapshots:
     dependencies:
       tslib: 2.7.0
 
-  '@hono/node-server@1.13.2(hono@4.6.4)':
+  '@hono/node-server@1.13.2(hono@4.6.5)':
     dependencies:
-      hono: 4.6.4
+      hono: 4.6.5
 
   '@hookform/resolvers@3.9.0(react-hook-form@7.53.0(react@18.3.1))':
     dependencies:
@@ -8354,7 +8352,7 @@ snapshots:
     dependencies:
       react-is: 16.13.1
 
-  hono@4.6.4: {}
+  hono@4.6.5: {}
 
   html-encoding-sniffer@4.0.0:
     dependencies:
@@ -10297,9 +10295,7 @@ snapshots:
       - supports-color
       - terser
 
-
-  vite-tsconfig-paths@5.0.1(typescript@5.6.3)(vite@5.4.8(@types/node@22.7.5)(sass@1.79.4)(terser@5.34.1)):
-
+  vite-tsconfig-paths@5.0.1(typescript@5.6.3)(vite@5.4.8(@types/node@22.7.5)(sass@1.79.5)(terser@5.34.1)):
     dependencies:
       debug: 4.3.7(supports-color@5.5.0)
       globrex: 0.1.2
